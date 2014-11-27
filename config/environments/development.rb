@@ -35,3 +35,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+DOMAIN = '.marvin.com:3000'
+APP_BASE_URL = 'http://marvin.com:3000'
+HOST = 'marvin.com:3000'
