@@ -80,3 +80,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+DOMAIN = '.marvindanig.com'
+APP_BASE_URL = 'https://marvindanig.com'
+HOST = 'marvindanig.com'
