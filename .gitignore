@@ -77,3 +77,25 @@ pickle-email-*.html
 # Environment files that may contain sensitive data
 .env
 .powenv
+
+config/ssl/
+
+# These should all be checked in to normalise the environment:
+# Gemfile.lock
+.ruby-version 
+.ruby-gemset
+test/reports
+coverage
+
+# Ignore other unneeded files.
+config/database.yml
+config/database.yml.mysql.example
+config/database.yml.postgresql.example
+# config/environments/production.rb
+config/environments/development.rb
+config/environments/test.rb
+
+config/*.yml
+# config/initializers/secret_token.rb
+config/initializers/stripe.rb
+config/secrets.yml 
