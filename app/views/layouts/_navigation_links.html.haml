@@ -1,3 +1,8 @@
-
-%li About
-%li Nothing
+%li.active
+  = link_to 'Work', page_path('work')
+%li
+  = link_to 'About', page_path('about')
+%li
+  %a{ href: 'http://marvindanig.svbtle.com/'} Thoughts
+%li
+  %a{ href: 'https://bubbl.in/marvin'} Experiments

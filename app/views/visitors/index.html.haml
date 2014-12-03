@@ -5,4 +5,4 @@
 %p.text-center 
   Send me a business
   = succeed '.' do
-    = link_to 'note', href: 'mailto:marvin@marvindanig.com'
+    = mail_to 'marvin@marvindanig.com', 'note'
