@@ -17,10 +17,10 @@ namespace :setup do
       upload! StringIO.new(File.read("config/ssl/COMODORSAAddTrustCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSAAddTrustCA.crt"
       upload! StringIO.new(File.read("config/ssl/COMODORSADomainValidationSecureServerCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSADomainValidationSecureServerCA.crt"
 
-      execute "mv #{shared_path}/config/ssl/certs/www_marvindanig_com.crt /etc/ssl/certs/www_marvindanig_com.crt"
-      execute "mv #{shared_path}/config/ssl/certs/AddTrustExternalCARoot.crt /etc/ssl/certs/AddTrustExternalCARoot.crt"
-      execute "mv #{shared_path}/config/ssl/certs/COMODORSAAddTrustCA.crt /etc/ssl/certs/COMODORSAAddTrustCA.crt"
-      execute "mv #{shared_path}/config/ssl/certs/COMODORSADomainValidationSecureServerCA.crt /etc/ssl/certs/COMODORSADomainValidationSecureServerCA.crt"
+      # execute "mv #{shared_path}/config/ssl/certs/www_marvindanig_com.crt /etc/ssl/certs/www_marvindanig_com.crt"
+      # execute "mv #{shared_path}/config/ssl/certs/AddTrustExternalCARoot.crt /etc/ssl/certs/AddTrustExternalCARoot.crt"
+      # execute "mv #{shared_path}/config/ssl/certs/COMODORSAAddTrustCA.crt /etc/ssl/certs/COMODORSAAddTrustCA.crt"
+      # execute "mv #{shared_path}/config/ssl/certs/COMODORSADomainValidationSecureServerCA.crt /etc/ssl/certs/COMODORSADomainValidationSecureServerCA.crt"
 
     end
   end
