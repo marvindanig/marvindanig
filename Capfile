@@ -14,7 +14,6 @@ require 'capistrano/postgresql'
 require 'capistrano/delayed_job'
 require 'capistrano/faster_assets'
 require 'capistrano/unicorn_nginx'
-require 'whenever/capistrano'
 # require 'capistrano/memcached'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
