@@ -31,7 +31,7 @@ server 'marvindanig.com', user: 'marvin', port: '22', roles: %w{ web app db }, p
 
 # CONFIGURATION: NGINX
 # ==================
-set :nginx_server_name, 'marvindanig'
+set :nginx_server_name, 'marvindanig.com'
 # # ignore this if you do not need SSL
 set :nginx_use_ssl, true
 set :nginx_upload_local_cert, true
