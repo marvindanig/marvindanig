@@ -100,7 +100,7 @@ group :development do
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-ssh-doctor', '~> 1.0'
   gem 'capistrano-postgresql', '~> 4.1.0'
-  # gem 'capistrano-delayed-job', '~> 1.0'
+  gem 'capistrano-delayed-job', '~> 1.0'
   gem 'capistrano-unicorn-nginx', '~> 3.1.0'
   # gem 'capistrano-memcached', '~> 1.0'
   # gem 'capistrano-maintenance', github: "capistrano/maintenance", require: false 

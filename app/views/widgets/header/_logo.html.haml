@@ -1,18 +1,2 @@
-/ - class_name = ''
-/ - if params[:controller] == 'users' and (params[:action] == 'inbox' || params[:action] == 'drafts' || params[:action] == 'trash')
-/   - class_name = 'inboxSlide' #TODO: Ajaxify the tab actions.
-/ - else
-/   - class_name = ''
+%a.element.logo.left{href: root_path, role: 'Marvin Danig' } Marvin Danig
 
-/ - if logged_in?
-/   %a.sprite-up.logo.left.ir{href: inbox_path(:id => current_profile), role: 'Bubblin Flipbooks', :class => class_name } Bubblin Flipbooks
-/   %a.left.beta-label.super-small{href: inbox_path}
-/     beta
-/ - else
-/   = link_to "Bubblin Flipbooks", root_path, :class => 'sprite-up logo left ir', role: 'Bubblin Flipbooks'
-/   %a.left.beta-label.super-small{href: root_path}
-/     beta
-
-%a.element.logo.left.lobster{href: root_path, role: 'Marvin Danig' } Marvin Danig
-
-.loader.left.hidden
