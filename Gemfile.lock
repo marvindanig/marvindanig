@@ -37,8 +37,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
-    bootswatch-rails (3.2.4)
-      railties (>= 3.1)
     builder (3.2.2)
     capistrano (3.2.1)
       i18n
@@ -289,7 +287,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
-  bootswatch-rails
   capistrano (~> 3.2.1)
   capistrano-bundler (~> 1.1.2)
   capistrano-delayed-job (~> 1.0)

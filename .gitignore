@@ -98,4 +98,5 @@ config/environments/test.rb
 config/*.yml
 # config/initializers/secret_token.rb
 config/initializers/stripe.rb
-config/secrets.yml 
+config/secrets.yml public/assets/
+public/assets/
