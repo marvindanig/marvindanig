@@ -1,0 +1,21 @@
+/* Modernizr & Browsehappy related styles here  */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.oops{
+    display:none;
+}
+
+.no-js .oops{
+    display:block;
+}
+
+.no-js #flipbook {
+  display:none;
+}
+

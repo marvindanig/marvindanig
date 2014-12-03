@@ -1,19 +1,16 @@
 !!!
-%html
-  %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Marvin Danig'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Marvin Danig'}"}
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-  
-
+!= cc_html(:lang => 'en') do
+  = render :partial => 'widgets/head/html_head'
   %body
-    %header
-      = render 'layouts/navigation'
-    %main.container{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    /[if lt IE 7]
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 
+    = render :partial => "widgets/header/header" # <Header Tag>
+    .container.flex
+      = yield # <Main tag for content>
+
+    / - unless params[:controller] == 'books'
+    /   = render :partial => "widgets/footer/footer" # <footer tag>
+
+    / = render :partial => "widgets/scripts/body_javascript_manager" # <Body scripts>
 

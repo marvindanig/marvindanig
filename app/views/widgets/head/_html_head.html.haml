@@ -1,0 +1,43 @@
+%head
+  / App Declarations
+  %meta{ :charset => 'utf-8' }
+  %meta{ 'http-equiv' => 'content-type', :content => 'text/html; charset=UTF-8' }
+  = csrf_meta_tag
+  %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}
+  %meta{ :name => 'description', :content => 'Marvin Danig | Personal Website' }
+  %meta{ :name => 'author', :content => 'Developer & Designer: Marvin Danig' }
+  %meta{ :name => 'google', :content => 'notranslate' }
+
+  / Disable pinch to zoom functionality on iPad and Mobiles for quick tap response on book.
+  %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0,  user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0' }
+
+  / Status bar styles: default, black, or black-translucent
+  %meta{ :name => 'apple-mobile-web-app-status-bar-style', :content=>'default'}
+
+  / Hides browser chrome
+  %meta{ :name => 'apple-mobile-web-app-capable', :content => 'yes' }
+
+  / CSRF Authenticity Tokens available in Layouts
+  = csrf_meta_tags
+
+
+  / Page Titles
+  %title
+    = full_title(yield(:title))
+
+  / Place favicon.ico and apple-touch-icon.png in the root directory
+  = render :partial => 'widgets/head/touch_icons_and_favicon'
+
+  / CSS  
+  / TODO: Move this into a style manager.
+  %link{:href => "https://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet", :type => "text/css"}/
+  %link{:href => "https://fonts.googleapis.com/css?family=Lobster", :rel => "stylesheet", :type => "text/css"}/
+  %link{:href => "https://fonts.googleapis.com/css?family=Tangerine", :rel => "stylesheet", :type => "text/css"}/
+  %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,900", :rel => "stylesheet", :type => "text/css"}/
+  
+  = stylesheet_link_tag 'application', media: :all, 'data-turbolinks-track' => true
+
+
+  / Javascripts
+  = render :partial => 'widgets/scripts/head_javascript_manager'
+

@@ -1,0 +1,27 @@
+%ul.horizontal-list.left.navi-menu
+  %li.hide-on-mobiles
+    = link_to 'About', page_path('about'), :class => 'transience'
+  %li#dropdown
+    = link_to 'Work', page_path('work'), :class => 'transience'
+
+  / - unless logged_in?
+  /   %li.hide-on-mobiles
+  /     = link_to 'Sign up', new_user_path, :class => 'transience'
+  /   %li#dropdown.triggerSigninOverlay
+  /     = link_to 'Login', login_path, :class => 'transience'
+
+  / - else
+  /   - if params[:action] == 'inbox'
+  /     %li.hide-on-mobiles
+  /       %a.transience.flex.element.user-label{ :href => profile_path(current_profile.friendly_id) }
+  /         = render :partial => 'widgets/users/passport_image'
+  /         %strong.side-gap
+  /           = current_profile.return_full_name
+  /   %li
+  /     %i.fa.fa-gear.faded-text.element.hand-cursor.dropdownbutton#dropdown
+
+  / - if logged_in? and !current_profile.nil?
+  /   = render :partial => 'widgets/overlays/user_submenu'
+
+  / - elsif !logged_in?
+  /   = render :partial => 'widgets/overlays/signin_form'
