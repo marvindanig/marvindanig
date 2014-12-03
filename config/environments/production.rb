@@ -1,5 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # Force visitors to HTTPS | Force all access to the app over SSL, use StrictTransportSecurity, and use secure cookies.
+  config.force_ssl = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -14,32 +16,37 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  # Memcache / Install memcached 1.4.x using Homebrew or Sudo
+  # config.cache_store = :dalli_store, { :namespace => 'bubblin', :expires_in => 1.day, :compress => true }
+
+  config.cache_store = :memory_store
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  # config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
+
+  # Version of your assets, change this if you want to expire all your assets.
+  config.assets.version = '1.0'
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
-
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
@@ -59,6 +66,9 @@ Rails.application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
+  config.assets.precompile = ['*.js.erb', '*.svg', '*.eot', '*.woff', '*.ttf', '*.png', '*.jpg', '*.jpeg', '*.gif', '*.ico']
+  config.assets.precompile << /\A(?!active_admin).*\.(js|css)\z/ # To avoid reincluding ActiveAdmin's CSS & JS 
+
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
