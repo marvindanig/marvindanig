@@ -1,10 +1,11 @@
 # == Route Map
 #
-# Prefix Verb URI Pattern Controller#Action
-#   root GET  /           visitors#index
-#   page GET  /pages/*id  high_voltage/pages#show
+# Prefix Verb URI Pattern     Controller#Action
+#   home GET  /home(.:format) redirect(301, /)
+#   root GET  /               high_voltage/pages#show {:id=>"home"}
+#   page GET  /*id            high_voltage/pages#show
 #
 
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  # root to: 'visitors#index'
 end

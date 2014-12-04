@@ -1,4 +1,9 @@
 = provide(:title,'Code | Life | Magazines | Rails | Javascript | Style')
    
 
-%h1.text-center Hello papagena!
+%h1.text-center.lobster Hello Papagena
+%p.text-center 
+  Send me a business
+  = succeed '.' do
+    = mail_to 'marvin@marvindanig.com', 'note'
+
