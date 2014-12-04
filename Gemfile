@@ -10,11 +10,11 @@ source 'https://rubygems.org'
   gem 'uglifier', '>= 1.3.0' # Compress JavaScript assets
   gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
   gem 'haml-rails' # Clean View Templates
-  # gem 'jquery-rails', '~> 3.1.1' # jQuery & jQuery_ujs
-  # gem 'modernizr-rails' # Modernizr for HTML5 Feature Detection
+  gem 'jquery-rails', '~> 3.1.1' # jQuery & jQuery_ujs
+  gem 'modernizr-rails' # Modernizr for HTML5 Feature Detection
   gem 'autoprefixer-rails' #Post Process vendor prefixes
   gem 'font-awesome-rails', "~> 4.2.0" #Font Awesome for iconified buttons
-  # gem 'htmlcompressor', '~> 0.1.2' # Compress all source, truncate everything using config/initializers/compression.rb
+  gem 'htmlcompressor', '~> 0.1.2' # Compress all source, truncate everything using config/initializers/compression.rb
 
 # Static Pages
   gem 'high_voltage'
