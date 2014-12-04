@@ -27,7 +27,7 @@ set :linked_files, %w{config/database.yml config/secrets.yml} # Default value fo
 # set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/sitemaps } # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
 
-set :keep_releases, 10 # Default value for keep_releases is 5
+set :keep_releases, 5 # Default value for keep_releases is 5
 
 # set :rails_env, 'production' # Force production env on staging and elsewhere
 # set :scm, :git # Default value for :scm is :git
