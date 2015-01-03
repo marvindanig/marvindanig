@@ -26,7 +26,10 @@ source 'https://rubygems.org'
   gem 'sendgrid'
   # gem 'mail'
   # gem 'premailer-rails'
-  
+
+# Favicon
+  gem 'favicon_maker'
+
 # Sitemaps & SEO
   gem 'roboto'
   gem 'dynamic_sitemaps'

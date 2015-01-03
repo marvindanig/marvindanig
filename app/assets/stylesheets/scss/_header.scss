@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
   background-scroll: scroll;
   height: 43px;
-  width:auto;
+  width:65px;
   background-position: center;
 }
 
@@ -57,8 +57,9 @@
 .navi-menu {
   li {
     a:hover, &#active a:hover, &.selected a:hover {
-      background: /* #a7d7ff */ rgba( 00, 130, 255, 0.3);
-      color: black;
+      /* background:  #a7d7ff  rgba( 00, 130, 255, 0.3); */
+      color: #1177ff /*black*/;
+      /* text-shadow: 1px 1px 10px rgba(17, 119, 255, 0.1); */
     }
   }
   > menu li a {
@@ -190,6 +191,11 @@ ul.document-editor-menu {
 .dropdownbutton {
   padding: 0 17px;
   font-size:24px;
+}
+
+.storebutton{
+  font-size: 24px;
+  padding: 10px 0;
 }
 
 .submenu {
