@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+   
+*  {
+   box-sizing: border-box;
+}
+
+/*
+ .cover {
+   text-align:center;
+   height:40vh;
+   display:flex;
+   align-items:center;
+   justify-content: center;
+}
+
+ .cover h1 {
+   font-size: 8vh;
+   font-family: 'Lobster';
+}
+
+ .cover h3  {
+   font-size: 2vh;
+}
+
+*/
+ .wrapper  {
+   position: relative;
+   width: 100vw;
+   text-align: center;
+   height: 140vh;
+   background-color:#000;
+   background-image: url("https://raw.githubusercontent.com/marvindanig/Images/master/galaxy_starfield_resized.png");
+}
+
+ .planets div  {
+   display: inline-block;
+   position: absolute;
+   
+}
+
+ .ring  {
+   border: 1px solid rgba(255,  255,  255,  0.5);
+   transform: rotate(0);
+   box-shadow: none;
+}
+
+ .one  {
+   width: 50vw;
+   height: 50vw;
+   border-radius: 50vw;
+   left: -18.33vw;
+   top: -18.33vw;
+}
+
+ .two  {
+   width: 8.67vw;
+   height: 8.67vw;
+   border-radius: 8.33vw;
+   background: #8edd6f;
+   top: 2.67vw;
+   left: -22vw;
+   transform-origin: 4.33vw 4.33vw;
+}
+
+ .two > .ring  {
+   width : 20vw;
+   height: 20vw;
+   border-radius: 20vw;
+   top: -5.83vw;
+   left: -5.83vw;
+}
+
+ .three  {
+   width: 5vw;
+   height: 5vw;
+   border-radius: 4.16vw;
+   background: #5be6ff;
+   top: 4.16vw;
+   right: -20.33vw;
+   transform-origin: 2.5vw 2.5vw;   
+}
+
+ .three > .ring  {
+   width : 12.833vw;
+   height: 12.833vw;
+   border-radius: 13.33vw;
+   top: -3.67vw;
+   left: -3.67vw;
+}
+
+ .four  {
+   width: 2.67vw;
+   height: 2.67vw;
+   border-radius: 2.67vw;
+   background: #dda1f9;
+   top: -3vw;
+   left: -3vw;
+   transform-origin: 1.33vw 1.33vw;
+}
+
+ .five  {
+   width: 1.67vw;
+   height: 1.67vw;
+   border-radius: 1.67vw;
+   background: #b58579;
+   top: -5vw;
+   left: -5vw;
+   transform-origin: .833vw .833vw;
+}
+
+ .six  {
+   width: 3.33vw;
+   height: 3.33vw;
+   border-radius: 1.67vw;
+   background: #7dfffd;
+   top: -8.33vw;
+   left: -8.33vw;
+   transform-origin: 1.67vw 1.67vw;
+}
+
+ .seven  {
+   width: 5vw;
+   height: 5vw;
+   border-radius: 8.33vw;
+   background: #fff;
+   top: -5vw;
+   left: -5vw;
+   transform-origin: 2.5vw 2.5vw;
+}
+
+ .slow > .ring  {
+   width : 19.5vw;
+   height: 19.5vw;
+   border-radius: 13.33vw;
+   top: -7vw;
+   left: -7vw;
+}
+
+ .fast > .ring  {
+   width : 25.33vw;
+   height: 25.33vw;
+   border-radius: 13.33vw;
+   top: -10.33vw;
+   left: -10.33vw;
+}
+
+ .sun  {
+   width: 13.33vw;
+   height: 13.33vw;
+   border-radius: 13.33vw;
+   top: 28.33vw;
+   left: 40vw;
+   display: inline-block;
+   position: absolute;
+   box-shadow: 0 0 120px #f1da36,  0 0 60px #f2ad00,  0 0 10px #c96800,  0 0 200px #feff8f;
+   background: radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
+   
+   background: -moz-radial-gradient(center,  ellipse cover,  #fcf3a1 0%,  #f1da36 100%);
+   background: -webkit-gradient(radial,  center center,  0px,  center center,  100%,  color-stop(0%, #fcf3a1),  color-stop(100%, #f1da36));
+   background: -webkit-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
+   background: -o-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
+   background: -ms-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
+}
+
+ .sun  {
+   animation: spin 100s infinite linear;
+}
+
+ .two  {
+   animation: spin 50s infinite linear;
+}
+
+ .three  {
+   animation: spin 70s infinite linear;
+}
+
+ .four  {
+   animation: spin 50s infinite linear;
+}
+
+ .slow  {
+   animation: spin 10s infinite linear;
+}
+
+ .fast  {
+   animation: spin 20s infinite linear;
+}
+
+ @keyframes spin  {
+  from  {
+    transform: rotate(0deg);
+  }
+
+  to {
+   transform: rotate(360deg);
+  }
+
+}
+
+.sun {
+  -webkit-animation: spin 100s infinite linear; 
+}  
+
+.two {
+  -webkit-animation: spin 50s infinite linear; 
+}
+
+.three {
+  -webkit-animation: spin 70s infinite linear; 
+}
+
+.four {
+  -webkit-animation: spin 50s infinite linear; 
+}
+
+.slow {
+  -webkit-animation: spin 10s infinite linear; 
+}
+
+.fast {
+  -webkit-animation: spin 20s infinite linear; 
+}
+
+
+@-webkit-keyframes spin {  
+from {  
+  transform: rotate(0deg);  
+}  
+to {  
+  transform: rotate(360deg);  
+   }  
+}
