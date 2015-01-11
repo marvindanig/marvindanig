@@ -15,6 +15,7 @@ source 'https://rubygems.org'
   gem 'autoprefixer-rails' #Post Process vendor prefixes
   gem 'font-awesome-rails', "~> 4.2.0" #Font Awesome for iconified buttons
   gem 'htmlcompressor', '~> 0.1.2' # Compress all source, truncate everything using config/initializers/compression.rb
+  gem 'prefixfree-rails'
 
 # Static Pages
   gem 'high_voltage'

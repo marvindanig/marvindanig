@@ -144,22 +144,16 @@
    left: -10.33vw;
 }
 
- .sun  {
-   width: 13.33vw;
-   height: 13.33vw;
-   border-radius: 13.33vw;
-   top: 28.33vw;
-   left: 40vw;
-   display: inline-block;
-   position: absolute;
-   box-shadow: 0 0 120px #f1da36,  0 0 60px #f2ad00,  0 0 10px #c96800,  0 0 200px #feff8f;
-   background: radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
-   
-   background: -moz-radial-gradient(center,  ellipse cover,  #fcf3a1 0%,  #f1da36 100%);
-   background: -webkit-gradient(radial,  center center,  0px,  center center,  100%,  color-stop(0%, #fcf3a1),  color-stop(100%, #f1da36));
-   background: -webkit-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
-   background: -o-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
-   background: -ms-radial-gradient(center,  ellipse cover,  #fcf3a1 0%, #f1da36 100%);
+.sun {
+  width: 13.33vw;
+  height: 13.33vw;
+  border-radius: 13.33vw;
+  top: 28.33vw;
+  left: 40vw;
+  display: inline-block;
+  position: absolute;
+  box-shadow: 0 0 120px #f1da36,  0 0 60px #f2ad00,  0 0 10px #c96800,  0 0 200px #feff8f;
+  background: radial-gradient(ellipse farthest-corner at center center , #fcf3a1 0%, #f1da36 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
  .sun  {
@@ -195,38 +189,4 @@
    transform: rotate(360deg);
   }
 
-}
-
-.sun {
-  -webkit-animation: spin 100s infinite linear; 
-}  
-
-.two {
-  -webkit-animation: spin 50s infinite linear; 
-}
-
-.three {
-  -webkit-animation: spin 70s infinite linear; 
-}
-
-.four {
-  -webkit-animation: spin 50s infinite linear; 
-}
-
-.slow {
-  -webkit-animation: spin 10s infinite linear; 
-}
-
-.fast {
-  -webkit-animation: spin 20s infinite linear; 
-}
-
-
-@-webkit-keyframes spin {  
-from {  
-  transform: rotate(0deg);  
-}  
-to {  
-  transform: rotate(360deg);  
-   }  
 }
