@@ -24,10 +24,12 @@
 
 */
  .wrapper  {
-   position: relative;
+   position: absolute;
+   top:0;
+   left:0;
    width: 100vw;
    text-align: center;
-   height: 140vh;
+   height: 100vh;
    background-color:#000;
    background-image: url("https://raw.githubusercontent.com/marvindanig/Images/master/galaxy_starfield_resized.png");
 }
@@ -148,7 +150,7 @@
   width: 13.33vw;
   height: 13.33vw;
   border-radius: 13.33vw;
-  top: 60vh;
+  top: 40vh;
   left: 45vw;
   display: inline-block;
   position: absolute;
