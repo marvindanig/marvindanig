@@ -28,8 +28,10 @@ source 'https://rubygems.org'
   gem 'delayed_job_active_record'
   gem 'daemons' # Wrap existing Ruby Scripts for delayed_jobs on production
   gem 'sendgrid'
+  # gem 'responders', '~> 2.0'
   # gem 'mail'
   # gem 'premailer-rails'
+
 
 # Favicon
   gem 'favicon_maker'
