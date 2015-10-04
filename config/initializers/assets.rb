@@ -5,4 +5,5 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( head.js )
+
+Rails.application.config.assets.precompile += %w( head.js monologue/foundation_icons/social_foundicons.eot monologue/foundation_icons/social_foundicons.woff monologue/foundation_icons/social_foundicons.ttf)

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Core gems
-  gem 'rails', '4.1.5'
+  gem 'rails', '4.2.3'
   gem 'pg' # Use PostGreSQL as DB for Active Record
   gem 'unicorn' # App server
 
@@ -19,6 +19,9 @@ source 'https://rubygems.org'
 
 # Static Pages
   gem 'high_voltage'
+
+# Blog face
+  gem 'monologue'
 
 # Mailers
   gem 'delayed_job' # Execute longer tasks asynchronously
