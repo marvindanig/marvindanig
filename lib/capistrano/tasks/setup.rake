@@ -11,11 +11,16 @@ namespace :setup do
   desc "Upload ssl_cert files."
   task :upload_ssl_certs do
     on roles(:web) do
-      execute "mkdir -p #{shared_path}/config/ssl/certs"
-      upload! StringIO.new(File.read("config/ssl/www_marvindanig_com.crt")), "#{shared_path}/config/ssl/certs/www_marvindanig_com.crt"
-      upload! StringIO.new(File.read("config/ssl/AddTrustExternalCARoot.crt")), "#{shared_path}/config/ssl/certs/AddTrustExternalCARoot.crt"
-      upload! StringIO.new(File.read("config/ssl/COMODORSAAddTrustCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSAAddTrustCA.crt"
-      upload! StringIO.new(File.read("config/ssl/COMODORSADomainValidationSecureServerCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSADomainValidationSecureServerCA.crt"
+      execute "mkdir -p #{shared_path}/config/ssl/2015"
+      upload! StringIO.new(File.read("config/ssl/2015/www_marvindanig_com/www_marvindanig_com.ca-bundle")), "#{shared_path}/config/ssl/2015/www_marvindanig_com.ca-bundle"
+      upload! StringIO.new(File.read("config/ssl/2015/www_marvindanig_com/www_marvindanig_com.crt")), "#{shared_path}/config/ssl/2015/www_marvindanig_com.crt"
+      upload! StringIO.new(File.read("config/ssl/2015/www_marvindanig_com/www_marvindanig_com.p7b")), "#{shared_path}/config/ssl/2015/www_marvindanig_com.p7b"
+
+
+      # upload! StringIO.new(File.read("config/ssl/www_marvindanig_com.crt")), "#{shared_path}/config/ssl/certs/www_marvindanig_com.crt"
+      # upload! StringIO.new(File.read("config/ssl/AddTrustExternalCARoot.crt")), "#{shared_path}/config/ssl/certs/AddTrustExternalCARoot.crt"
+      # upload! StringIO.new(File.read("config/ssl/COMODORSAAddTrustCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSAAddTrustCA.crt"
+      # upload! StringIO.new(File.read("config/ssl/COMODORSADomainValidationSecureServerCA.crt")), "#{shared_path}/config/ssl/certs/COMODORSADomainValidationSecureServerCA.crt"
 
       # execute "mv #{shared_path}/config/ssl/certs/www_marvindanig_com.crt /etc/ssl/certs/www_marvindanig_com.crt"
       # execute "mv #{shared_path}/config/ssl/certs/AddTrustExternalCARoot.crt /etc/ssl/certs/AddTrustExternalCARoot.crt"
