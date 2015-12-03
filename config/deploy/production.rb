@@ -35,9 +35,9 @@ set :nginx_server_name, 'marvindanig.com'
 # # ignore this if you do not need SSL
 set :nginx_use_ssl, true
 set :nginx_upload_local_cert, true
-set :nginx_ssl_cert, "www_marvindanig_com.crt"
+set :nginx_ssl_cert, "www.marvindanig.com.chained-2015.crt"
 set :nginx_ssl_cert_key, "www.marvindanig.com.key"
-set :nginx_ssl_cert_local_path, '#{shared_path}/config/ssl/certs/www_marvindanig_com.crt'
+set :nginx_ssl_cert_local_path, '#{shared_path}/config/ssl/certs/2015'
 set :nginx_ssl_cert_key_local_path, '/etc/ssl/private/www.marvindanig.com.key'
 # set :nginx_pid, "/run/nginx.pid"
 # set :nginx_location, "/etc/nginx"
