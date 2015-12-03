@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   # Force visitors to HTTPS | Force all access to the app over SSL, use StrictTransportSecurity, and use secure cookies.
-  config.force_ssl = false
+  config.force_ssl = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
