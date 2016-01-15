@@ -1,3 +1,8 @@
 = render :partial => 'widgets/scripts/analytics'
 
 
+/[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+:javascript
+  window.onload = function() { document.body.className = ''; }
+  window.ontouchmove = function() { return false; }
+  window.onorientationchange = function() { document.body.scrollTop = 0; }

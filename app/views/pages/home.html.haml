@@ -1,18 +1,28 @@
-= provide(:title,'Home')
+= provide(:title,"Bird's eye view".html_safe)
 
-.fold
-  .box
-    %h1.lobster MD
-    %hr
-    %p
-      %a.white{href: 'mailto:marvin@marvindanig.com'}
-        Say Hello 
-      %i.fa.fa-certificate.side-gap.large
-      %a.white{href: 'https://bubbl.in/marvin-marvin-danig'}
-        Book Design
-    %hr
-    .center
-      %a.white.fa.fa-envelope.side-gap{href: 'mailto:marvin@marvindanig.com'}
-      %a.white.fa.fa-twitter.side-gap{href: 'https://twitter.com/marvindanig'}
-      %a.white.fa.fa-github.side-gap{href: 'https://github.com/marvindanig'}
-        
+%body.loading
+  #wrapper
+    #bg
+    #overlay
+    #main
+      / Header
+      %header#header
+        %h1 Marvin Danig
+        %p Developer  •  Designer  •  Manager
+        %nav
+          %ul
+            %li
+              %a.icon.fa-github{:href => "https://github.com/marvindanig"}
+                %span.label Github
+            %li
+              %a.icon.fa-twitter{:href => "https://twitter.com/marvindanig"}
+                %span.label Twitter
+            %li
+              %a.icon.fa-facebook{:href => "https://facebook.com/marvindanig"}
+                %span.label Facebook
+            %li
+              %a.icon.fa-book{:href => "https://bubbl.in/marvin"}
+                %span.label Books
+            %li
+              %a.icon.fa-envelope-o{:href => "mailto:marvin@marvindanig.com"}
+                %span.label Email

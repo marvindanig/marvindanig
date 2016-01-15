@@ -20,8 +20,9 @@ source 'https://rubygems.org'
 # Static Pages
   gem 'high_voltage'
 
-# Blog face
-  gem 'monologue'
+# Blog 
+#   gem 'monologue'
+  gem 'bloggy'
 
 # Mailers
   gem 'delayed_job' # Execute longer tasks asynchronously
@@ -29,8 +30,8 @@ source 'https://rubygems.org'
   gem 'daemons' # Wrap existing Ruby Scripts for delayed_jobs on production
   gem 'sendgrid'
   gem 'responders', '~> 2.0'
-  # gem 'mail'
-  # gem 'premailer-rails'
+
+
 
 
 # Favicon
