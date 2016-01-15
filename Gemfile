@@ -21,7 +21,6 @@ source 'https://rubygems.org'
   gem 'high_voltage'
 
 # Blog 
-#   gem 'monologue'
   gem 'bloggy'
 
 # Mailers
