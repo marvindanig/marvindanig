@@ -15,17 +15,8 @@
 
   / = render :partial => 'widgets/head/touch_icons_and_favicon'
 
-
-  \/[if lte IE 8]
-  %script{:src => "assets/js/ie/html5shiv.js"}
-  
   %link{:href => "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
-  
-  / \/[if lte IE 8]
-  / = stylesheet_link_tag 'ie8', media: :all, 'data-turbolinks-track' => true
-  / \/[if lte IE 9]
-  / = stylesheet_link_tag 'ie9', media: :all, 'data-turbolinks-track' => true
-  
+    
   = stylesheet_link_tag 'application', media: :all, 'data-turbolinks-track' => true
 
   = javascript_include_tag 'application'
