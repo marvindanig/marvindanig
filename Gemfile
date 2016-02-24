@@ -21,7 +21,7 @@ source 'https://rubygems.org'
   gem 'high_voltage'
 
 # Blog 
-  gem 'bloggy'
+  # gem 'bloggy' # Moved to free wordpress. Less hassle.
 
 # Mailers
   gem 'delayed_job' # Execute longer tasks asynchronously
